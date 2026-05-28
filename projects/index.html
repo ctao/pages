@@ -4,42 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — ctao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <div class="artifact">
-    <div class="artifact-bar">
-      <div class="dots">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-      </div>
-      <div class="bar-title">projects — ctao</div>
-      <div class="bar-actions">
-        <a href="../">home</a>
-        <a href="https://github.com/ctao/pages">github</a>
-      </div>
+  <header class="doc-header">
+    <div class="breadcrumb-line"><a href="../">ctao</a> / projects</div>
+    <div class="doc-title-row">
+      <h1 class="doc-title">Projects</h1>
     </div>
-    <div class="artifact-body">
-      <div class="breadcrumb">
-        <a href="../">ctao</a>
-        <span>›</span>
-        projects
-      </div>
-      <div class="page-header">
-        <h1>Projects</h1>
-        <p>Things I've built or am building.</p>
-      </div>
-      <ul class="entry-list">
-        <!-- add projects here, e.g.:
-        <li>
-          <a href="https://github.com/ctao/example">example</a>
-          <span class="meta">short description</span>
-        </li>
-        -->
-      </ul>
-      <p class="empty-state">Nothing here yet.</p>
+    <div class="doc-meta">
+      <span>Things I've built or am building.</span>
     </div>
-  </div>
+  </header>
+
+  <main class="doc-main">
+    <p class="eyebrow">All projects</p>
+    <div class="doc-index">
+      <!-- add projects here, e.g.:
+      <a class="doc-row" href="https://github.com/ctao/example">
+        <span class="doc-row-title">example</span>
+        <span class="doc-row-meta">short description</span>
+      </a>
+      -->
+    </div>
+    <p style="color: var(--doc-text-muted); font-style: italic;">Nothing here yet.</p>
+  </main>
 </body>
 </html>

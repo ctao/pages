@@ -4,41 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ctao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="artifact">
-    <div class="artifact-bar">
-      <div class="dots">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-      </div>
-      <div class="bar-title">ctao</div>
-      <div class="bar-actions">
-        <a href="https://github.com/ctao/pages">github</a>
-      </div>
+  <header class="doc-header">
+    <div class="breadcrumb-line">ctao / pages</div>
+    <div class="doc-title-row">
+      <h1 class="doc-title">ctao</h1>
+      <button id="doge-btn" title="wow">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg" alt="doge">
+      </button>
     </div>
-    <div class="artifact-body">
-      <div class="page-header">
-        <h1>ctao</h1>
-        <p>Notes, projects, and other things.</p>
-      </div>
-      <ul class="section-list">
-        <li>
-          <a href="notes/">
-            notes
-            <span class="arrow">›</span>
-          </a>
-        </li>
-        <li>
-          <a href="projects/">
-            projects
-            <span class="arrow">›</span>
-          </a>
-        </li>
-      </ul>
+    <div class="doc-meta">
+      <span><strong>github</strong> <a href="https://github.com/ctao">@ctao</a></span>
     </div>
-  </div>
+  </header>
+
+  <main class="doc-main">
+    <div class="section-intro">
+      <p>Notes, projects, and other things.</p>
+    </div>
+
+    <p class="eyebrow">Sections</p>
+    <div class="doc-index">
+      <a class="doc-row" href="notes/">
+        <span class="doc-row-title">Notes</span>
+        <span class="doc-row-meta">thoughts &amp; write-ups</span>
+      </a>
+      <a class="doc-row" href="projects/">
+        <span class="doc-row-title">Projects</span>
+        <span class="doc-row-meta">things i've built</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    const DOGE_SRC = 'https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg';
+    const WORDS = ['wow','such site','very pages','much html','so css','amaze','many bytes','very deploy'];
+    const COLORS = ['#b58900','#268bd2','#2aa198','#d33682','#859900','#cb4b16'];
+
+    document.getElementById('doge-btn').addEventListener('click', () => {
+      const overlay = document.createElement('div');
+      overlay.className = 'doge-overlay';
+
+      const big = document.createElement('img');
+      big.className = 'doge-big';
+      big.src = DOGE_SRC;
+      overlay.appendChild(big);
+
+      WORDS.forEach((word, i) => {
+        const el = document.createElement('span');
+        el.className = 'doge-word';
+        el.textContent = word;
+        el.style.left = (10 + Math.random() * 75) + '%';
+        el.style.top  = (15 + Math.random() * 65) + '%';
+        el.style.fontSize = (15 + Math.random() * 18) + 'px';
+        el.style.color = COLORS[i % COLORS.length];
+        el.style.animationDelay = (i * 0.18) + 's';
+        overlay.appendChild(el);
+      });
+
+      document.body.appendChild(overlay);
+      setTimeout(() => overlay.remove(), 2600);
+    });
+  </script>
 </body>
 </html>

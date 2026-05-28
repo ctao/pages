@@ -4,42 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notes — ctao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <div class="artifact">
-    <div class="artifact-bar">
-      <div class="dots">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
-      </div>
-      <div class="bar-title">notes — ctao</div>
-      <div class="bar-actions">
-        <a href="../">home</a>
-        <a href="https://github.com/ctao/pages">github</a>
-      </div>
+  <header class="doc-header">
+    <div class="breadcrumb-line"><a href="../">ctao</a> / notes</div>
+    <div class="doc-title-row">
+      <h1 class="doc-title">Notes</h1>
     </div>
-    <div class="artifact-body">
-      <div class="breadcrumb">
-        <a href="../">ctao</a>
-        <span>›</span>
-        notes
-      </div>
-      <div class="page-header">
-        <h1>Notes</h1>
-        <p>Thoughts, write-ups, and things worth keeping.</p>
-      </div>
-      <ul class="entry-list">
-        <!-- add notes here, e.g.:
-        <li>
-          <a href="example.html">Example Note</a>
-          <span class="meta">2026-05-28</span>
-        </li>
-        -->
-      </ul>
-      <p class="empty-state">Nothing here yet.</p>
+    <div class="doc-meta">
+      <span>Thoughts, write-ups, and things worth keeping.</span>
     </div>
-  </div>
+  </header>
+
+  <main class="doc-main">
+    <p class="eyebrow">All notes</p>
+    <div class="doc-index">
+      <!-- add notes here, e.g.:
+      <a class="doc-row" href="example.html">
+        <span class="doc-row-title">Example Note</span>
+        <span class="doc-row-meta">2026-05-28</span>
+      </a>
+      -->
+    </div>
+    <p style="color: var(--doc-text-muted); font-style: italic;">Nothing here yet.</p>
+  </main>
 </body>
 </html>
